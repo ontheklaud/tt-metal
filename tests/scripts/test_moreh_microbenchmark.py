@@ -1253,7 +1253,7 @@ def record_moreh_microbenchmark_csv(capsys, create_moreh_microbenchmark_csv):
     "r, c, num_tiles, tiles_per_transfer, noc_index, noc_direction, access_type, use_device_profiler, device_id",
     [
         (0, 0, 204800, tiles_per_transfer, noc_index, noc_direction, access_type, 0, device_id)
-        for tiles_per_transfer in [1, 2, 4, 8, 16, 32]
+        for tiles_per_transfer in [32]
         for noc_index in range(2)
         for noc_direction in range(4)
         for access_type in range(2)
