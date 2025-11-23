@@ -1293,7 +1293,7 @@ def test_noc_adjacent(
         + str(access_type)
         + " --device-id "
         + str(device_id)
-        + "--bypass-check"
+        + " --bypass-check"
     )
     if use_device_profiler:
         command += " --use-device-profiler"
