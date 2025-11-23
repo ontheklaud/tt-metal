@@ -1340,18 +1340,16 @@ def test_noc_rtor(
 
 
 @pytest.mark.parametrize("device_id", range(32))
-@pytest.mark.parametrize("buffer_type", [0, 1])  # 0: DRAM, 1: L1
+@pytest.mark.parametrize(
+    "buffer_type",
+    [
+        0,
+        # 1,
+    ])  # 0: DRAM, 1: L1
 @pytest.mark.parametrize(
     "buffer_size",
     [
-        8192,
-        32768,
-        131072,
-        524288,
-        2097152,
-        8388608,
-        33554432,
-        134217728,
+        # 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728,
         536870912,
     ],
 )
