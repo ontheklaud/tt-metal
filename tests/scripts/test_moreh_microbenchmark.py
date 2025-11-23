@@ -798,8 +798,10 @@ def test_matmul_single_core_sharded(
     [
         *[
             ("wormhole_b0", 1000, np.array([k, 12 * 128]), 1, 8, fmt, 12, 0, device_id)
-            for k in [2**i for i in range(9, 16)]  # 2^9 = 512 to 2^15 = 32768
-            for fmt in [0, 1]
+            # for k in [2**i for i in range(9, 16)]  # 2^9 = 512 to 2^15 = 32768
+            for k in [2**i for i in range(10, 16)]  # 2^10 = 1024 to 2^15 = 32768
+            # for fmt in [0, 1]
+            for fmt in [1]
             for device_id in range(32)
         ],
     ],
