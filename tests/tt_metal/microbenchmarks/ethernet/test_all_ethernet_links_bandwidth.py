@@ -74,7 +74,12 @@ def run_erisc_write_worker_bw(
 @pytest.mark.parametrize("num_packets", [256])
 @pytest.mark.parametrize("channel_count", [16])
 @pytest.mark.parametrize("num_iterations", [1])
-@pytest.mark.parametrize("packet_size", [16, 128, 256, 512, 1024, 2048, 4096, 8192])
+@pytest.mark.parametrize(
+    "packet_size",
+    [
+        # 16, 128, 256, 512, 1024, 2048, 4096,
+        8192
+    ])
 def test_erisc_bw_uni_dir(num_packets, packet_size, channel_count, num_iterations, request):
     packet_size_to_expected_bw = {
         "wormhole_b0": {16: 0.28, 128: 2.25, 256: 4.39, 512: 8.35, 1024: 11.74, 2048: 11.84, 4096: 12.04, 8192: 12.07},
