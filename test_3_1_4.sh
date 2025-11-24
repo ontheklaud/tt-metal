@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Reset GLX
-tt-smi -glx_reset; tt-smi -s > $HOME/results/device_map.json; sleep 120
+tt-smi -glx_reset; tt-smi -s > $HOME/results/device_map.json; sleep 300
 
 # Run test with environment variables and log output
 TT_METAL_HOME=$HOME/tt-metal-6u_test PYTHONPATH=$HOME/tt-metal-6u_test \
