@@ -306,7 +306,9 @@ def run_dram_read_cmd(k, n, num_blocks, df, num_banks, bank_start_id, device_id)
         + str(num_banks)
         + " --bank-start-id "
         + str(bank_start_id)
-        + " --bypass-check "
+        + " --device-id "
+        + str(device_id)
+        + " --bypass-check"
     )
     run_moreh_single_test("DRAM BW test multi-core", command)
 
